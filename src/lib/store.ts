@@ -12,7 +12,6 @@ import {
 	DEFAULT_LINE_NUMBERS,
 	DEFAULT_PADDING,
 	DEFAULT_THEME,
-	DEFAULT_WATERMARK,
 	DEFAULT_WINDOW_CONTROLS,
 } from "@/constants";
 
@@ -40,8 +39,6 @@ const defaultSettings: EditorSettings = {
 	lineNumbers: DEFAULT_LINE_NUMBERS,
 
 	windowControls: DEFAULT_WINDOW_CONTROLS,
-
-	watermark: DEFAULT_WATERMARK,
 };
 
 export const useEditorStore = create<EditorStore>((set) => ({
