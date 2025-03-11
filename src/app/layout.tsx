@@ -71,7 +71,7 @@ export default function RootLayout({
 			<body
 				className={`${outfit.variable} ${jetbrainsMono.variable} ${robotoMono.variable} ${sourceCodePro.variable} font-outfit antialiased`}
 			>
-				<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+				<ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
 					{children}
 				</ThemeProvider>
 			</body>
