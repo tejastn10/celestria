@@ -15,8 +15,6 @@ type EditorSettings = {
 	lineNumbers: boolean;
 
 	windowControls: boolean;
-
-	watermark: boolean;
 };
 
 type AvailableFont = {
