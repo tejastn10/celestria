@@ -92,12 +92,12 @@
 }
 
 /*
-  The default border color has changed to `currentColor` in Tailwind CSS v4,
-  so we've added these compatibility styles to make sure everything still
-  looks the same as it did with Tailwind CSS v3.
+	The default border color has changed to `currentColor` in Tailwind CSS v4,
+	so we've added these compatibility styles to make sure everything still
+	looks the same as it did with Tailwind CSS v3.
 
-  If we ever want to remove these styles, we need to add an explicit border
-  color utility to any element that depends on these defaults.
+	If we ever want to remove these styles, we need to add an explicit border
+	color utility to any element that depends on these defaults.
 */
 @layer base {
 	*,
@@ -186,11 +186,6 @@ h3 code {
 	@apply text-lg! md:text-xl!;
 }
 
-code,
-pre {
-	font-family: var(--font-outfit), sans-serif;
-}
-
 pre {
 	@apply px-4! rounded-lg overflow-x-auto py-4!;
 	@apply bg-muted! text-muted-foreground! rounded-lg overflow-x-auto;
@@ -220,4 +215,26 @@ pre > code {
 
 article * {
 	user-select: text;
+}
+
+.code-with-line-numbers {
+	display: flex;
+	width: 100%;
+}
+
+.line-numbers-gutter {
+	display: flex;
+	flex-direction: column;
+	padding-right: 1rem;
+	border-right: 1px solid rgba(128, 128, 128, 0.3);
+	margin-right: 1rem;
+	user-select: none;
+	color: rgba(128, 128, 128, 0.7);
+	text-align: right;
+	justify-content: space-evenly;
+}
+
+.line-number {
+	font-size: 0.85em;
+	padding: 0 0.5rem;
 }
