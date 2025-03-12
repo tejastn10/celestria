@@ -28,8 +28,8 @@ const FontSelector: FC = () => {
 	};
 
 	return (
-		<div className="space-y-4">
-			<div>
+		<div className="flex space-x-4">
+			<div className="w-2/3">
 				<Select onValueChange={onFamilyChangeHandler} defaultValue={settings.fontFamily}>
 					<Label>Font Family</Label>
 					<SelectTrigger className="my-2">
@@ -48,8 +48,7 @@ const FontSelector: FC = () => {
 					</SelectContent>
 				</Select>
 			</div>
-
-			<div>
+			<div className="w-1/3">
 				<Select onValueChange={onSizeChangeHandler} defaultValue={settings.fontSize.toString()}>
 					<Label>Font Size</Label>
 					<SelectTrigger className="my-2">
