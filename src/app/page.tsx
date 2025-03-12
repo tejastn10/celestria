@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 
 import { motion } from "motion/react";
-import { Moon, Sun } from "lucide-react";
+import { Download, Moon, Sun } from "lucide-react";
 
 import { Toolbar } from "@/containers/Toolbar";
 import { CodeEditor } from "@/containers/Editor";
@@ -66,7 +66,12 @@ export default function Home() {
 							>
 								{isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
 							</Button>
-							<Button onClick={() => handleExport("png")} variant="outline">
+							<Button
+								onClick={() => handleExport("png")}
+								variant="outline"
+								className="flex items-center gap-2"
+							>
+								<Download className="w-4 h-4" />
 								Export
 							</Button>
 						</div>
