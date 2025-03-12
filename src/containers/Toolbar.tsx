@@ -2,6 +2,8 @@
 
 import { FC } from "react";
 
+import { Settings, RefreshCw } from "lucide-react";
+
 import { Label } from "@/components/ui/Label";
 import { Switch } from "@/components/ui/Switch";
 import { Button } from "@/components/ui/Button";
@@ -13,13 +15,17 @@ import { LanguageSelector } from "./LanguageSelector";
 import { BackgroundSelector } from "./BackgroundSelector";
 
 import { useEditorStore } from "@/lib/store";
+import { GlowingText } from "@/components/animated/GlowingText";
 
 const Toolbar: FC = () => {
 	const { settings, updateSettings, resetSettings } = useEditorStore();
 
 	return (
 		<div className="space-y-6">
-			<h2 className="text-xl font-semibold mb-4">Customize</h2>
+			<div className="flex items-center gap-2 mb-4">
+				<Settings className="w-5 h-5" />
+				<GlowingText text="Customize" className="text-xl font-semibold" />
+			</div>
 
 			<div className="space-y-4">
 				<div>
@@ -41,7 +47,7 @@ const Toolbar: FC = () => {
 				<FontSelector />
 				<PaddingSelector />
 
-				<div className="flex flex-col gap-4 mt-4">
+				<div className="flex gap-6 mt-4">
 					<div className="flex items-center">
 						<Switch
 							id="line-numbers"
@@ -63,7 +69,11 @@ const Toolbar: FC = () => {
 					</div>
 				</div>
 
-				<Button className="w-full mt-4 py-2" onClick={resetSettings}>
+				<Button
+					className="w-full mt-4 py-2 flex items-center justify-center gap-2"
+					onClick={resetSettings}
+				>
+					<RefreshCw className="w-4 h-4" />
 					Reset settings
 				</Button>
 			</div>
