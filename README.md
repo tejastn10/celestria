@@ -68,23 +68,22 @@ Ensure you have the following installed:
 
 ```bash
 celestria/
-├── public/ # Static assets
+├── public/                # Static assets
 ├── src/
-│ ├── app/ # Next.js App Router pages
-│ ├── components/ # Reusable UI components
-│ │ ├── editor/ # Code editor components
-│ │ ├── ui/ # Generic UI components
-│ ├── lib/ # Utility functions and services
-│ │ ├── store # State management
-│ ├── styles/ # Global styles
-│ ├── types/ # TypeScript type definitions
-├── .eslint.config.mjs # ESLint configuration
-├── .prettierrc.yml # Prettier configuration
-├── next.config.js # Next.js configuration
-├── tailwind.config.js # Tailwind CSS configuration
-├── tsconfig.json # TypeScript configuration
-├── package.json # Dependencies and scripts
-└── README.md # This documentation
+│ ├── app/                 # Next.js App Router pages
+│ ├── components/          # Reusable UI components
+│ │ ├── editor/            # Code editor components
+│ │ ├── ui/                # Generic UI components
+│ ├── lib/                 # Utility functions and services
+│ │ ├── store              # State management
+│ ├── styles/              # Global styles
+│ ├── types/               # TypeScript type definitions
+├── biome.json             # Biome configuration
+├── next.config.js         # Next.js configuration
+├── tailwind.config.js     # Tailwind CSS configuration
+├── tsconfig.json          # TypeScript configuration
+├── package.json           # Dependencies and scripts
+└── README.md              # This documentation
 ```
 
 ---
