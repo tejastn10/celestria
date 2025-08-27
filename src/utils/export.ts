@@ -1,4 +1,4 @@
-import { toPng, toJpeg, toSvg } from "html-to-image";
+import { toJpeg, toPng, toSvg } from "html-to-image";
 
 import { formatFileName } from "@/utils/editor";
 

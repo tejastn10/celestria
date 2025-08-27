@@ -1,20 +1,17 @@
 "use client";
 
-import { FC } from "react";
-
+import type { FC } from "react";
+import { Label } from "@/components/ui/Label";
 import {
 	Select,
-	SelectTrigger,
-	SelectValue,
 	SelectContent,
 	SelectGroup,
 	SelectItem,
+	SelectTrigger,
+	SelectValue,
 } from "@/components/ui/Select";
-import { Label } from "@/components/ui/Label";
-
-import { useEditorStore } from "@/lib/store";
-
 import { AVAILABLE_THEMES } from "@/constants";
+import { useEditorStore } from "@/lib/store";
 
 const ThemeSelector: FC = () => {
 	const { settings, updateSettings } = useEditorStore();

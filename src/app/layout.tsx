@@ -2,13 +2,10 @@ import "./globals.css";
 
 import type { Metadata } from "next";
 
-import { Outfit, JetBrains_Mono, Roboto_Mono, Source_Code_Pro } from "next/font/google";
-
+import { JetBrains_Mono, Outfit, Roboto_Mono, Source_Code_Pro } from "next/font/google";
+import type { ReactNode } from "react";
 import { ThemeProvider } from "@/components/theme/ThemeProvider";
-
 import { DATA } from "@/data/data";
-
-import { ReactNode } from "react";
 
 const outfit = Outfit({
 	subsets: ["latin"],

@@ -1,16 +1,13 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-
-import { motion } from "motion/react";
 import { Download, Moon, Sun } from "lucide-react";
 
-import { Toolbar } from "@/containers/Toolbar";
-import { CodeEditor } from "@/containers/Editor";
-
-import { Button } from "@/components/ui/Button";
-
+import { motion } from "motion/react";
+import { useEffect, useRef, useState } from "react";
 import { LineGrow } from "@/components/animated/LineGrow";
+import { Button } from "@/components/ui/Button";
+import { CodeEditor } from "@/containers/Editor";
+import { Toolbar } from "@/containers/Toolbar";
 
 import { exportImage } from "@/utils/export";
 

@@ -1,22 +1,18 @@
 "use client";
 
-import { FC } from "react";
-
+import type { FC } from "react";
+import { Label } from "@/components/ui/Label";
 import {
 	Select,
-	SelectTrigger,
-	SelectValue,
 	SelectContent,
 	SelectGroup,
 	SelectItem,
+	SelectTrigger,
+	SelectValue,
 } from "@/components/ui/Select";
-import { Label } from "@/components/ui/Label";
-
-import { useEditorStore } from "@/lib/store";
-
-import { getBackgroundById } from "@/utils/editor";
-
 import { AVAILABLE_BACKGROUNDS, GRADIENT_DIRECTIONS } from "@/constants";
+import { useEditorStore } from "@/lib/store";
+import { getBackgroundById } from "@/utils/editor";
 
 const BackgroundSelector: FC = () => {
 	const { settings, updateSettings } = useEditorStore();

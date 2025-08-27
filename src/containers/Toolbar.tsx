@@ -1,21 +1,17 @@
 "use client";
 
-import { FC } from "react";
-
-import { Settings, RefreshCw } from "lucide-react";
-
+import { RefreshCw, Settings } from "lucide-react";
+import type { FC } from "react";
+import { GlowingText } from "@/components/animated/GlowingText";
+import { Button } from "@/components/ui/Button";
 import { Label } from "@/components/ui/Label";
 import { Switch } from "@/components/ui/Switch";
-import { Button } from "@/components/ui/Button";
-
-import { FontSelector } from "./FontSelector";
-import { ThemeSelector } from "./ThemeSelector";
-import { PaddingSelector } from "./PaddingSelector";
-import { LanguageSelector } from "./LanguageSelector";
-import { BackgroundSelector } from "./BackgroundSelector";
-
 import { useEditorStore } from "@/lib/store";
-import { GlowingText } from "@/components/animated/GlowingText";
+import { BackgroundSelector } from "./BackgroundSelector";
+import { FontSelector } from "./FontSelector";
+import { LanguageSelector } from "./LanguageSelector";
+import { PaddingSelector } from "./PaddingSelector";
+import { ThemeSelector } from "./ThemeSelector";
 
 const Toolbar: FC = () => {
 	const { settings, updateSettings, resetSettings } = useEditorStore();
@@ -33,7 +29,6 @@ const Toolbar: FC = () => {
 						Code
 					</label>
 					<textarea
-						id="code-input"
 						className="w-full h-40 p-2 bg-transparent border rounded-md font-mono text-sm"
 						value={settings.code}
 						onChange={(e) => updateSettings({ code: e.target.value })}
@@ -50,7 +45,6 @@ const Toolbar: FC = () => {
 				<div className="flex gap-6 mt-4">
 					<div className="flex items-center">
 						<Switch
-							id="line-numbers"
 							className="mr-2"
 							checked={settings.lineNumbers}
 							onCheckedChange={(val) => updateSettings({ lineNumbers: val })}
@@ -60,7 +54,6 @@ const Toolbar: FC = () => {
 
 					<div className="flex items-center">
 						<Switch
-							id="window-controls"
 							className="mr-2"
 							checked={settings.windowControls}
 							onCheckedChange={(val) => updateSettings({ windowControls: val })}

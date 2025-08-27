@@ -1,7 +1,7 @@
 "use client";
 
-import { FC } from "react";
-
+import type { FC } from "react";
+import { Label } from "@/components/ui/Label";
 import {
 	Select,
 	SelectContent,
@@ -10,11 +10,8 @@ import {
 	SelectTrigger,
 	SelectValue,
 } from "@/components/ui/Select";
-import { Label } from "@/components/ui/Label";
-
-import { useEditorStore } from "@/lib/store";
-
 import { AVAILABLE_FONTS, FONT_SIZE_OPTIONS } from "@/constants";
+import { useEditorStore } from "@/lib/store";
 
 const FontSelector: FC = () => {
 	const { settings, updateSettings } = useEditorStore();

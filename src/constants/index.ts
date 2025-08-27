@@ -1,4 +1,9 @@
-import { AvailableBackground, AvailableFont, AvailableLanguage, AvailableTheme } from "@/types";
+import type {
+	AvailableBackground,
+	AvailableFont,
+	AvailableLanguage,
+	AvailableTheme,
+} from "@/types";
 
 const AVAILABLE_FONTS: AvailableFont[] = [
 	{ id: "JetBrains Mono", name: "JetBrains Mono" },
@@ -166,16 +171,13 @@ export {
 	DEFAULT_FONT_SIZE,
 	DEFAULT_LINE_NUMBERS,
 	DEFAULT_WINDOW_CONTROLS,
-
 	// ? Editor Settings
 	AVAILABLE_THEMES,
 	AVAILABLE_LANGUAGES,
-
 	// ? Background Settings
 	AVAILABLE_BACKGROUNDS,
 	GRADIENT_DIRECTIONS,
 	PADDING_OPTIONS,
-
 	// ? Font Settings
 	AVAILABLE_FONTS,
 	FONT_SIZE_OPTIONS,

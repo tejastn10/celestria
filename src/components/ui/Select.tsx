@@ -1,26 +1,24 @@
 "use client";
 
-import { ComponentPropsWithoutRef, ComponentRef, forwardRef } from "react";
-
 import {
-	Root,
-	Group,
-	Value,
-	Trigger,
-	Icon,
-	ScrollUpButton,
-	ScrollDownButton,
-	Label,
-	Portal,
 	Content,
-	Viewport,
+	Group,
+	Icon,
 	Item,
 	ItemIndicator,
 	ItemText,
+	Label,
+	Portal,
+	Root,
+	ScrollDownButton,
+	ScrollUpButton,
 	Separator,
+	Trigger,
+	Value,
+	Viewport,
 } from "@radix-ui/react-select";
-
 import { Check, ChevronDown, ChevronUp } from "lucide-react";
+import { type ComponentPropsWithoutRef, type ComponentRef, forwardRef } from "react";
 
 import { cx } from "@/utils/tailwind";
 

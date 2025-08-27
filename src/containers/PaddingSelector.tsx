@@ -1,26 +1,23 @@
 "use client";
 
-import { FC } from "react";
-
+import type { FC } from "react";
+import { Label } from "@/components/ui/Label";
 import {
 	Select,
-	SelectTrigger,
-	SelectValue,
 	SelectContent,
 	SelectGroup,
 	SelectItem,
+	SelectTrigger,
+	SelectValue,
 } from "@/components/ui/Select";
-import { Label } from "@/components/ui/Label";
-
-import { useEditorStore } from "@/lib/store";
-
 import { PADDING_OPTIONS } from "@/constants";
+import { useEditorStore } from "@/lib/store";
 
 const PaddingSelector: FC = () => {
 	const { settings, updateSettings } = useEditorStore();
 
 	const onChangeHandler = (val: string) => {
-		updateSettings({ padding: parseInt(val) });
+		updateSettings({ padding: parseInt(val, 10) });
 	};
 
 	return (

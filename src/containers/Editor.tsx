@@ -1,6 +1,6 @@
 "use client";
 
-import { FC, useEffect, useState } from "react";
+import { type FC, useEffect, useState } from "react";
 
 import { createHighlighter } from "shiki";
 
@@ -108,6 +108,8 @@ const CodeEditor: FC = () => {
 			style={{ ...backgroundStyle, padding: settings.padding }}
 		>
 			{/* Inject custom styles */}
+
+			{/** biome-ignore lint/security/noDangerouslySetInnerHtml: <Needed> */}
 			<style dangerouslySetInnerHTML={{ __html: customStyles }} />
 
 			<div className="editor-header flex items-center justify-between p-3">
@@ -120,6 +122,7 @@ const CodeEditor: FC = () => {
 				)}
 			</div>
 
+			{/** biome-ignore lint/security/noDangerouslySetInnerHtml: <Needed> */}
 			<div className="code-content p-4" dangerouslySetInnerHTML={{ __html: renderedCode }} />
 		</div>
 	);

@@ -1,7 +1,4 @@
 import { create } from "zustand";
-
-import { EditorSettings } from "@/types";
-
 import {
 	DEFAULT_BACKGROUND,
 	DEFAULT_CODE_SAMPLE,
@@ -14,6 +11,7 @@ import {
 	DEFAULT_THEME,
 	DEFAULT_WINDOW_CONTROLS,
 } from "@/constants";
+import type { EditorSettings } from "@/types";
 
 interface EditorStore {
 	settings: EditorSettings;

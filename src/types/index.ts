@@ -43,7 +43,6 @@ type AvailableBackground = {
 
 export type {
 	EditorSettings,
-
 	// ? Actual Editor Settings
 	AvailableFont,
 	AvailableTheme,
