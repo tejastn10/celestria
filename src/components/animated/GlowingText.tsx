@@ -14,7 +14,7 @@ const GlowingText: FC<GlowingTextProps> = ({ text, className }) => {
 		<span className={cx("inline-flex text-xs", className)}>
 			{text.split("").map((char, i) => (
 				<span
-					key={`glow-char-${text}`}
+					key={`glow-char-${char}-${String(i)}`}
 					className="animate-glow inline-block"
 					style={{
 						animationDelay: `${i * 100}ms`,
